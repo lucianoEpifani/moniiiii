@@ -1,0 +1,706 @@
+    /* GENERALS */
+
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+    }
+
+    html {
+        box-sizing: border-box;
+      }
+
+      *, *:before, *:after {
+        box-sizing: inherit;
+      }
+
+    body{
+        width: 100%;
+        margin: 0 auto;
+        
+    }
+
+    /* HEADER */
+
+    .header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem;
+        background-color: #d0dbcf2b;
+    }
+
+    /* NAVEGATION */
+
+    .navegation{
+        display: flex
+    }
+
+    .navegation-list{
+        list-style-type: none;
+        display: flex;
+        gap: 1rem;
+    }
+
+    .navegation-list li a{
+        text-decoration: none;
+        color: #77e369;
+    }
+
+    /* LOGO */
+
+    .logo{
+        max-width: 10rem;
+    }
+    /* MENU */
+
+    .abrir-menu,
+    .cerrar-menu{
+        display: none;
+    }
+
+    .navegation-list li a:hover{
+        color: #a2e699;
+    }
+
+    @media only screen and (min-width: 600px){
+
+        body{
+            background-image: url(../IMG/tacosPared.jpg);
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+          }
+
+          .imagen-principal{
+            display: none;
+          }
+          
+          .btn a {
+            text-decoration: none;
+          }
+
+          .btn{
+            bottom: -40%;
+            right: 44%;
+            position: absolute;
+            border-radius: 4px;
+            box-shadow: 5px 5px #444444;
+            text-align: center;
+            font-size: 0.7rem;
+            padding: 0.7rem;
+            width: 10rem;
+            transition: all 0.5s;
+            cursor: pointer;
+            position: absolute;
+            border: #000 solid 0.1rem;
+            text-decoration: none;
+          }
+
+          .btn:hover{
+            -webkit-box-shadow: 0px 0px 20px 8px rgba(232, 219, 134, 1);
+                -moz-box-shadow: 0px 0px 20px 8px rgba(232, 219, 134, 1);
+                box-shadow: 0px 0px 20px 8px rgba(232, 219, 134, 1);
+                border: #e8db86 solid 0.1rem;
+        }
+
+          .flex{    
+            display: flex;
+            gap: 3rem;
+
+          }
+
+          footer{
+            position: absolute;
+            top: 100%;
+            background-color: #000;
+            color: #fff;
+          }
+
+          .seccion-links{
+            display: flex;
+            align-items: center;
+            gap: 10rem;
+          }
+
+
+          .our-restaurant a{
+            color: white;
+            text-decoration: none;
+          }
+
+          .our-restaurant a:hover{
+            scale: 1.3;
+            transition: 0.3s;
+          }
+
+          .our-restaurant{
+            display: flex;
+            flex-direction: column;
+            gap: 1.4rem;
+            margin: 2rem;
+            color: white;
+          }
+
+          .titulo-footer{
+            inline-size: max-content;
+          }
+
+          .icono-footer:hover{
+            scale: 1.3;
+            transition: 0.3s;
+          }
+          
+          .mapa{
+            width: auto;
+            height: auto;
+            margin: 2rem;
+            border-radius: .8rem;
+            border: solid 1px white;
+            padding: 1.4rem;
+          }
+
+          .mapa:hover{
+            scale: 1.1;
+            transition: 0.3s;
+          }
+
+
+          .contact{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin: 2rem;
+          }
+     }
+    
+    @media only screen and (max-width: 600px){ 
+        .abrir-menu,.cerrar-menu{
+            display: block;
+            border: 0;
+            background-color: transparent;
+            cursor: pointer;
+        }
+
+        .abrir-menu{
+            color: #1c1c1c;
+        }
+
+        .cerrar-menu{
+            color: #ececec;
+        }
+
+        .navegation{
+            opacity: 0;
+            visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            gap: 1.5rem;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #4e4d4d;
+            padding: 3rem;
+            box-shadow: 0 0 0 100vmax rgba(53, 52, 52, 0.6);
+        } 
+
+        .header{
+            -webkit-box-shadow: 0px 0px 4px 2px rgb(9, 9, 9);
+            -moz-box-shadow: 0px 0px 4px 2px rgb(12, 12, 12);
+            box-shadow: 0px 0px 4px 2px rgb(7, 7, 7);
+            
+        }
+
+        .navegation.visible{
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .btn.invisible{
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .navegation-list{
+            flex-direction: column;
+            align-items: end;
+        }
+
+        .navegation-list li a{
+            color: #ffffff;
+        }
+
+        body{
+            background-image: url(/IMG/tacosPared.jpg);
+            background-position: top center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 40rem;
+            max-width: 120rem;   
+        }
+
+
+        .main button{
+            color: #ececec;
+            margin-top: 12rem;
+            margin-left: 2rem;   
+        }
+
+        /* btn */
+
+        
+.btn:hover{
+    -webkit-box-shadow: 0px 0px 8px 5px rgb(242, 241, 235);
+        -moz-box-shadow: 0px 0px 8px 5px rgb(246, 244, 231);
+        box-shadow: 0px 0px 8px 5px rgb(233, 232, 224);
+        border: #cccbc7 solid 0.1rem;
+}
+
+
+.btn{
+        border-radius: 4px;
+        text-align: center;
+        font-size: 0.4rem;
+        padding: 0.4rem;
+        width: 10rem;
+        transition: all 0.5s;
+        cursor: pointer;
+        position: absolute;
+        top: 30%;
+        right: 30%;
+        border: #000 solid 0.1rem;
+        background-color: #000;
+}
+
+.btn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    font-family: 'Quicksand', sans-serif;
+    color: #b9bdb9;
+}
+
+.btn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.btn:hover span {
+    padding-right: 22px;
+}
+
+.btn:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.btn a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.fotos{
+    position: absolute;
+    bottom: 16%;
+    border: #000 solid 0.1rem;
+    height: 15rem;
+    object-fit: cover;
+}
+
+
+/* FOOTER */
+
+
+footer{
+    position: absolute;
+    top: 70%;
+}
+
+.flex{
+    background-color: #000;
+    color: #fff;
+   
+}
+
+a .links-footer{
+    font-size: 2rem;
+}
+
+.flex-start{
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.5rem;
+    gap: 1rem;
+    align-items: center;
+    width: 420px;
+    font-size: 2rem;
+   
+}
+
+.our-restaurant{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+}
+
+.our-restaurant a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.5rem;
+}
+
+.contact{
+    font-weight: 700;
+}
+
+.seccion-redes{
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.6rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.5rem;
+}
+.icono-footer{
+    width: 1rem;
+}
+
+.contacto{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.titulo-footer{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 0.7rem;
+    margin-top: 0.5rem;
+    font-weight: 400;
+}
+
+iframe{
+    margin-top: 0.5rem;
+    width: 300px;
+    height: 100px;
+    
+    
+}
+
+        
+}
+
+     @media only screen and (max-width: 600px){ 
+        .abrir-menu,.cerrar-menu{
+            display: block;
+            border: 0;
+            background-color: transparent;
+            cursor: pointer;
+        }
+
+        .abrir-menu{
+            color: #1c1c1c;
+        }
+
+        .cerrar-menu{
+            color: #ececec;
+        }
+
+        .navegation{
+            opacity: 0;
+            visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            gap: 1.5rem;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #4e4d4d;
+            padding: 3rem;
+            box-shadow: 0 0 0 100vmax rgba(53, 52, 52, 0.6);
+        } 
+
+        .header{
+            -webkit-box-shadow: 0px 0px 4px 2px rgb(9, 9, 9);
+            -moz-box-shadow: 0px 0px 4px 2px rgb(12, 12, 12);
+            box-shadow: 0px 0px 4px 2px rgb(7, 7, 7);
+            
+        }
+
+        .navegation.visible{
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .btn.invisible{
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .navegation-list{
+            flex-direction: column;
+            align-items: end;
+        }
+
+        .navegation-list li a{
+            color: #ffffff;
+        }
+
+        body{
+            background-image: url(/IMG/tacosPared.jpg);
+            background-position: top center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: auto;
+            max-width: 100%;   
+        }
+
+
+        .main button{
+            color: #ececec;
+            margin-top: 12rem;
+            margin-left: 2rem;   
+        }
+
+        /* btn */
+
+        
+.btn:hover{
+    -webkit-box-shadow: 0px 0px 8px 5px rgb(242, 241, 235);
+        -moz-box-shadow: 0px 0px 8px 5px rgb(246, 244, 231);
+        box-shadow: 0px 0px 8px 5px rgb(233, 232, 224);
+        border: #cccbc7 solid 0.1rem;
+}
+
+
+.btn{
+        border-radius: 4px;
+        text-align: center;
+        font-size: 0.4rem;
+        padding: 0.4rem;
+        width: 10rem;
+        transition: all 0.5s;
+        cursor: pointer;
+        position: absolute;
+        top: 30%;
+        right: 30%;
+        border: #000 solid 0.1rem;
+        background-color: #000;
+}
+
+.btn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    font-family: 'Quicksand', sans-serif;
+    color: #b9bdb9;
+}
+
+.btn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.btn:hover span {
+    padding-right: 22px;
+}
+
+.btn:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.btn a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.fotos{
+    position: absolute;
+    bottom: 16%;
+    border: #000 solid 0.1rem;
+    height: 15rem;
+    object-fit: cover;
+}
+
+
+/* FOOTER */
+
+
+footer{
+    position: absolute;
+    bottom: 0;
+}
+
+.flex{
+    background-color: #000;
+    color: #fff;
+   
+}
+
+a .links-footer{
+    font-size: 2rem;
+}
+
+.flex-start{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    width: 420px;
+    font-size: 2rem;
+   
+}
+
+.our-restaurant{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+}
+
+.our-restaurant a{
+    text-decoration: none;
+    color: #fff;
+    font-size: .8rem;
+}
+
+.contact{
+    font-weight: 700;
+}
+
+.seccion-redes{
+    display: flex;
+    gap: 1rem;
+    font-size: 1em;
+}
+
+.getinTouch{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: .8rem;
+}
+
+.Rights{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icono-footer{
+    width: 1rem;
+}
+
+.contacto{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.titulo-footer{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: .8rem;
+    margin-top: 0.5rem;
+    font-weight: 700;
+}
+
+iframe{
+    margin-top: 0.5rem;
+    width: 300px;
+    height: 100px;
+}
+
+        
+}
+
+      @media only screen and (max-width: 430px){ 
+        body{
+            height: 30rem;
+        }
+
+        .btn{
+            top: 25%;
+        }
+      }      
+
+      @media only screen and (min-width: 380px){ 
+        body{
+            height: 20rem;
+        }
+    
+        .flex-start{
+            width: 380px;
+        }
+    
+        .btn{
+            top: 23%;
+        }
+      }
+
+    
+
+
+@media only screen and (max-width: 376px){
+    
+    .flex{
+        position: absolute;}
+
+    .flex-start {
+        width: 376px; }
+
+    .btn{
+        top: 60%;}
+
+
+    body{
+        height: 51rem;}
+    
+ }
+
+ 
+
+  @media only screen and (min-width: 410px){ 
+    body{
+        height: 15rem;
+    }
+
+    .flex-start{
+        width: 410px;
+    }
+
+    .btn{
+        top: 25%;
+    }
+  }
+
+  
+ @media only screen and (min-width: 600px){
+    
+    .btn{top: 132%;}
+ }
+
+ @media only screen and (min-width: 410px){
+    .flex-start {
+        width: 420px;
+      }
+ }
+
+
+  
+
+  
